@@ -276,8 +276,13 @@ nav h1 {
     font-size: 18px;
 
 }
-#horarios .funcional {
-    border-right: 5px solid red !important;
+
+#Horarios .esquina1 {
+    border-top-left-radius: 15px
+}
+
+#Horarios .funcional {
+    border-top-right-radius: 15px;
 }
 
 #Testimonios {
