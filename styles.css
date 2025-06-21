@@ -38,7 +38,29 @@ nav li a {
     color: #eee;
     text-decoration: none;
     margin: 0;
+    position: relative;
+    transition: all 0.3s ease;
 }
+
+nav li a::after {
+
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    background-color: #c6cf29;
+    transition: transform 0.3s ease;
+}
+
+nav li a:hover::after {
+    transform: scaleX(1);
+}
+
 nav i {
     margin-top: 1px;
     font-size: 25px;
