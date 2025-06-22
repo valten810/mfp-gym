@@ -52,7 +52,7 @@ nav li a::after {
     width: 100%;
     height: 2px;
     transform: scaleX(0);
-    transform-origin: center;
+    transform-origin: left;
     background-color: #c6cf29;
     transition: transform 0.3s ease;
 }
@@ -192,6 +192,7 @@ nav h1 {
 .plan-basico h3, .plan-full h3 {
     font-size: 2rem;
     color: #c6cf29;
+    margin-bottom: 12px;
     
 }
 
@@ -208,21 +209,12 @@ nav h1 {
     
 }
 
-.precio {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 30px;
-}
-.precio::before {
-    content: '$';
-    font-size: 1.2rem;
-    vertical-align: top;
-}
 
 .beneficios li {
+
     border-bottom: 1px solid #333;
     transition: color 0.3s;
+    margin-bottom: 45px;
 }
 
 .beneficios li:hover {
