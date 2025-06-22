@@ -192,7 +192,6 @@ nav h1 {
 .plan-basico h3, .plan-full h3 {
     font-size: 2rem;
     color: #c6cf29;
-    margin-bottom: 12px;
     
 }
 
@@ -209,12 +208,9 @@ nav h1 {
     
 }
 
-
 .beneficios li {
-
     border-bottom: 1px solid #333;
     transition: color 0.3s;
-    margin-bottom: 45px;
 }
 
 .beneficios li:hover {
