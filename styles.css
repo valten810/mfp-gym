@@ -12,7 +12,9 @@ body {
 
 
 }
-
+#Planes , #Horarios , #Testimonios , #Contactos {
+    scroll-margin-top: 100px ;
+}
 
 header, header a {
     background-color: #111;
@@ -48,6 +50,7 @@ nav li a {
     margin: 0;
     position: relative;
     transition: all 0.3s ease;
+    background-color: #0f00;
 }
 
 nav li a::after {
@@ -141,9 +144,10 @@ nav h1 {
     background-color: #c6cf29;
     color: #0a0a0a;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
     transition: all 0.3s;
+    text-transform: uppercase;
 }
 
 .hero a:hover, .cta-button:hover {
@@ -157,6 +161,12 @@ nav h1 {
     margin-top: 50px;
     color: #c6cf29;
 
+}
+
+#Planes div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #Planes li {
@@ -182,6 +192,7 @@ nav h1 {
 
 .plan-basico, .plan-full {
     width: 400px;
+    height: 550px;
     box-shadow: 0 0 30px #444;
     background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
     border: 1px solid #c6cf29;
@@ -190,12 +201,30 @@ nav h1 {
     border-radius: 10px;
     text-align: center;
     text-transform: uppercase;
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     margin: 2%;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    
+
 
 }
+
+.plan-basico p, .plan-full p {
+    text-transform: none;
+    border-left: 2px solid #c6cf29;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+
+
+
 
 .plan-basico h3, .plan-full h3 {
     font-size: 2rem;
@@ -212,8 +241,6 @@ nav h1 {
 
 .plan-basico:hover, .plan-full:hover {
     transform: scale(1.04);
-    background-color: #dce22e;
-    
 }
 
 
@@ -222,87 +249,13 @@ nav h1 {
     transition: color 0.3s;
 }
 
-.beneficios li:hover {
+.beneficios li:hover, #Planes p:hover {
     color: #c6cf29;
 }
 
 
 
-#Horarios h2 {
-    font-size: 48px;
-    text-align: center;
-    color: #c6cf29;
-    margin-top: 100px;
-    position: relative;
-    margin-bottom: 40px;
-}
 
-
-#Horarios h2::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #c6cf29;
-}
-
-#Horarios table {
-
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 900px;
-    height: 150px;
-    margin: auto;
-    margin-bottom: 60px;
-    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-    border-radius: 15px;
-    padding: 7px;
-    color: #eee;
-
-}
-
-#Horarios thead {
-    font-size: 20px;
-
-    color: #c6cf29;
-    border-radius: 15px;
-}
-#Horarios td {
-    margin: 30px;
-    padding: 25px;
-
-
-
-}
-
-#Horarios th {
-    background-color: #c6cf29;
-    color: #0a0a0a;
-    font-size: 18px;
-    padding: 15px;
-}
-
-
-.fila1, .fila2 {
-    border-bottom: 1px solid #0a0a0a;
-}
-
-#Horarios td, #Horarios th {
-    text-align: center;
-    font-size: 18px;
-
-}
-
-#Horarios .esquina1 {
-    border-top-left-radius: 15px
-}
-
-#Horarios .funcional {
-    border-top-right-radius: 15px;
-}
 
 #Testimonios {
     margin-bottom: 100px;
@@ -365,48 +318,123 @@ nav h1 {
     max-width: 900px;
     padding: 60px;
     border: 2px solid #c6cf29;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #Contactos h2 {
     text-align: center;
     font-size: 48px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     position: relative;
 }
 
-#Contactos h2::after {
-    content: "";
+.contactos__subtitle {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.contacto__label {
+    display: block;
+}
+
+#Contactos h2 {
+    color: #c6cf29;
+}
+
+.contacto input, .contacto textarea {
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #333;
+}
+
+.contacto input:focus, .contacto textarea:focus {
+    border: 2px solid #c6cf29;
+}
+.contacto textarea {
+    
+    resize: vertical;
+}
+
+/* Estilo del botón con efecto amarillo y negro */
+.button {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    margin-top: 10px;
+}
+
+/* Efecto de brillo que pasa por el botón */
+.button::before {
+    content: '';
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #c6cf29;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+    transition: left 0.5s;
 }
 
-.cps {
-    margin: 50px 0;
+.button:hover::before {
+    left: 100%;
 }
 
-#Contactos h2, #Contactos h3 {
+/* Efectos hover */
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, #ffb300 0%, #ff8f00 100%);
+}
+
+/* Efecto cuando se presiona */
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Efecto de focus para accesibilidad */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+}
+
+.contactos__direct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+.contactos__item {
+    text-align: center;
+}
+.contactos__item a {
     color: #c6cf29;
-}
-
-#Contactos a {
-    color: #c6cf29;
-}
-#Contactos h3 {
-    font-size: 1.11em;
-}
-
-
-.ItemAtencion {
-    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .footer {
+    margin-top: 100px;
     background-color: #111;
     width: 100%;
     height: 230px;
@@ -427,11 +455,8 @@ nav h1 {
     font-size: 13px;
 }
 
-.contactos i {
-    font-size: 18px;
-    margin-left: 3px;
 
-}
+
 
 
 
@@ -472,15 +497,7 @@ nav h1 {
     }
     
 
-    #Horarios table {
-        font-size: 14px;
-    }
-    
-    #Horarios td, #Horarios th {
-        padding: 15px 8px;
-        font-size: 14px;
-    }
-    
+
 
     .contacto {
         padding: 40px 30px;
@@ -511,14 +528,18 @@ nav h1 {
     nav li {
         margin: 5px 8px;
         display: inline-block;
+
     }
     
     nav li a {
         font-size: 14px;
-        padding: 8px 12px;
         display: block;
     }
-    
+    nav li a::after {
+
+    bottom: -5px;
+
+}
 
     .hero h2 {
         font-size: 28px;
@@ -596,6 +617,10 @@ nav h1 {
     .testimonio {
         padding: 25px 20px;
         margin: 20px 0;
+    }
+    .testimonio::before {
+        top: -15px;
+        left: 10px;
     }
     
     .testimonio em {
@@ -677,3 +702,4 @@ nav h1 {
         font-size: 11px;
     }
 }
+
