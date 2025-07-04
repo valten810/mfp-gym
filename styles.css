@@ -339,6 +339,7 @@ nav h1 {
 
 .contacto__label {
     display: block;
+    color: #c6cf29;
 }
 
 #Contactos h2 {
@@ -352,13 +353,14 @@ nav h1 {
     width: 100%;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border: 2px solid #333;
+    color: #eee;
 }
 
 .contacto input:focus, .contacto textarea:focus {
     border: 2px solid #c6cf29;
 }
 .contacto textarea {
-    
+    font-family: sans-serif ;
     resize: vertical;
 }
 
