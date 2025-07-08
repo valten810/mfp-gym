@@ -285,7 +285,7 @@ nav h1 {
     font-size: clamp(28px, 4vw, 42px);
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 10px;
     gap: 20px;
     color: #eee;
     border: 1px solid #777;
