@@ -272,7 +272,7 @@ nav h1 {
     width: 100%;
     max-width: 1400px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     gap: clamp(30px, 6vw, 90px);
 }
