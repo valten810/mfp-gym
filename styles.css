@@ -12,7 +12,7 @@ body {
 
 
 }
-#Planes , #Horarios , #Testimonios , #Contactos {
+#Planes , #Horarios , #Sobre-mi , #Contactos {
     scroll-margin-top: 100px ;
 }
 
@@ -86,6 +86,14 @@ nav h1 {
     margin-left: 40px;
     margin-bottom: 20px;
     font-size: 32px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+
 }
 
 .hero {
@@ -257,8 +265,9 @@ nav h1 {
     align-items: center;
     gap: clamp(50px, 8vw, 100px);
     justify-content: center;
-    padding: 40px 20px;
+
 }
+
 
 .sobre__h2 {
     font-size: clamp(32px, 5vw, 48px);
@@ -266,7 +275,16 @@ nav h1 {
     position: relative;
     text-align: center;
 }
-
+.sobre__h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #c6cf29;
+}
 .sobre__container {
     display: flex;
     width: 100%;
