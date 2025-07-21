@@ -103,7 +103,11 @@ nav h1 {
     background-size: cover;
     position: relative;
     text-align: center;
-    
+    animation: FadeIn 1s ease;
+    mask-image: linear-gradient(
+        #0ff 80%,
+        transparent
+    );
 }
 
 .hero::before {
@@ -128,6 +132,10 @@ nav h1 {
     color: #c6cf29;
     position: relative;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: FadeIn 1s ease both;
+    animation-delay: 100ms;
 
 }
 
@@ -143,8 +151,17 @@ nav h1 {
 }
 .hero p {
     font-size: 20px;
-}
+    opacity: 0;
+    transform: translateY(30px);
+    animation: FadeIn 1s ease both;
+    animation-delay: 300ms;
 
+}
+.hero a {
+    opacity: 0;
+    animation: FadeIn 1s ease both;
+    animation-delay: 500ms;
+}
 .hero a, .cta-button {
     display: inline-block;
     margin-top: 20px;
@@ -705,7 +722,16 @@ nav h1 {
         font-size: 12px;
     }
 }
-
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media screen and (max-width: 360px) {
     
