@@ -27,6 +27,8 @@
 
     <meta name="keywords" content="Agustin Ramirez, Agustin, Ramirez, fitness, entrenamiento, salud, rutinas, Córdoba, musculación, bienestar, personal trainer">
 
+    <!-- AOS CSS-->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +41,7 @@
                 <li><a href="#Inicio">Inicio</a></li>
                 <li><a href="#Planes">Planes</a></li>
                 <li><a href="#Sobre-mi">Sobre mi</a></li>
-                <li><a href="#Contactos">Contacto <style></style></a></li>
+                <li><a href="#Contactos">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -54,9 +56,9 @@
         </section>
 
         <section id="Planes">
-            <h2>Planes y precios</h2>
+            <h2 data-aos="fade-up" >Planes y precios</h2>
             <div>
-                <article class="plan-basico">
+                <article class="plan-basico" data-aos="fade-up" data-aos-delay="100" >
                     <h3>Plan esencial</h3>
                     <ul class="beneficios">
                         <li>✔️ Rutina 100% adaptada a tu objetivo</li>
@@ -67,7 +69,7 @@
                     </ul>
                     <a href="https://wa.me/+5492945527053" target="_blank" rel="noopener noreferrer" class="cta-button">VER MAS INFORMACION</a>
                 </article>
-                <article class="plan-full">
+                <article class="plan-full" data-aos="fade-up" data-aos-delay="300">
                     <h3>Plan full</h3>
                     <ul class="beneficios">
                         <li>✔️ Todo lo del Plan Esencial</li>
@@ -82,14 +84,14 @@
             </div>
         </section>
         <section id="Sobre-mi" class="sobre_mi" >
-            <h2 class="sobre__h2">¿Quién soy?</h2>
-            <div class="sobre__container">
+            <h2 class="sobre__h2" data-aos="fade-up" data-aos-duration="600">¿Quién soy?</h2>
+            <div class="sobre__container" data-aos="fade-right" data-aos-delay="100" data-aos-duration="600">
                 <div class="img__container">
-                    <p class="container__p">PERSONAL TRAINER</p>
+                    <p class="container__p" >PERSONAL TRAINER</p>
                     <h4> UN POCO DE MI HISTORIA</h4>
                     <img src="AgusE.png" alt="Imagen de mi fisico" class="sobre__img">
                 </div>
-                <p class="sobre__p">Mi nombre es Agustín Ramírez, tengo 21 años y soy entrenador personal. <br>
+                <p class="sobre__p" data-aos="fade-left" data-aos-delay="250" data-aos-duration="600">Mi nombre es Agustín Ramírez, tengo 21 años y soy entrenador personal. <br>
                 Comencé a entrenar a los 17 años, en un momento donde no me sentía bien conmigo mismo. Lo hice sin tener demasiadas expectativas, pero con la idea de que algo tenía que cambiar. Con el tiempo, el gimnasio dejó de ser solo un lugar para entrenar y se convirtió en una parte fundamental de mi vida. <br>
                 Lo que empezó como una búsqueda personal terminó transformándose en una vocación. A través del entrenamiento no solo mejoré mi físico, sino también mi mentalidad, mi disciplina y mi forma de encarar los desafíos. <br>
                 Hoy, como entrenador, mi objetivo es ayudarte a que vivas ese mismo proceso. No importa si recién estás empezando o si ya llevás tiempo entrenando. Creo en el trabajo constante, en la planificación adecuada y en adaptar el entrenamiento a cada persona para que pueda dar su mejor versión. <br>
@@ -99,9 +101,9 @@
         </section>
 
         <section class="contactos" id="Contactos">
-            <h2>Empezá tu cambio hoy</h2>
-            <p class="contactos__subtitle">¿Estas listo para entrenar en serio?</p>
-            <form action="https://formspree.io/f/mldnvvea" method="post"  class="contacto">
+            <h2 data-aos="fade-up"  data-aos-offset="200">Empezá tu cambio hoy</h2>
+            <p class="contactos__subtitle" data-aos="fade-up"  data-aos-offset="200" data-aos-delay="100">¿Estas listo para entrenar en serio?</p>
+            <form action="https://formspree.io/f/mldnvvea" method="post"  class="contacto" data-aos="fade-up" data-aos-delay="200"  data-aos-offset="200">
                 <div>
                     <label for="nombre" class="contacto__label">Nombre</label>
                     <input type="text" name="nombre" id="nombre" required />
@@ -117,8 +119,8 @@
                 <button type="submit" class=" button">Enviar</button>
             </form>
             <div class="contactos__direct">
-                <p class="contactos__item"><strong>WhatsApp:</strong> <a href="https://wa.me/+5492945527053" target="_blank">+54 93514567890</a></p>
-                <p class="contactos__item"><strong>Instagram:</strong> <a href="https://www.instagram.com/agusramirez.04?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" >@agusramirez.04</a></p>
+                <p class="contactos__item" data-aos="fade-right"  ><strong>WhatsApp:</strong> <a href="https://wa.me/+5492945527053" target="_blank">+54 93514567890</a></p>
+                <p class="contactos__item" data-aos="fade-right"   data-aos-delay="100"><strong>Instagram:</strong> <a href="https://www.instagram.com/agusramirez.04?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" >@agusramirez.04</a></p>
 
             </div>
 
@@ -132,5 +134,13 @@
         <p class="foot-copy">© TODOS LOS DERECHOS RESERVADOS. </p>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>

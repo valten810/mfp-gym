@@ -1,3 +1,13 @@
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -133,8 +143,8 @@ nav h1 {
     position: relative;
     margin-bottom: 40px;
     opacity: 0;
-    transform: translateY(30px);
-    animation: FadeIn 1s ease both;
+
+    animation: FadeIn 0.8s ease both;
     animation-delay: 100ms;
 
 }
@@ -152,15 +162,17 @@ nav h1 {
 .hero p {
     font-size: 20px;
     opacity: 0;
-    transform: translateY(30px);
-    animation: FadeIn 1s ease both;
+
+    animation: FadeIn 0.8s ease both;
     animation-delay: 300ms;
 
 }
 .hero a {
-    opacity: 0;
-    animation: FadeIn 1s ease both;
+    opacity: 1;
+    transform: translateY(0);
+    animation: FadeIn 0.8s ease backwards;
     animation-delay: 500ms;
+    transition: all 0.3s ease;
 }
 .hero a, .cta-button {
     display: inline-block;
@@ -176,7 +188,7 @@ nav h1 {
 }
 
 .hero a:hover, .cta-button:hover {
-    transform: translateY(-3px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(198, 207, 41, 0.5);
 }
 
@@ -230,7 +242,7 @@ nav h1 {
     justify-content: space-between;
     align-items: center;
     margin: 2%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
 
     
 
@@ -264,7 +276,7 @@ nav h1 {
 }
 
 .plan-basico:hover, .plan-full:hover {
-    transform: scale(1.04);
+    transform: scale(1.04) !important;
 }
 
 
@@ -382,7 +394,7 @@ nav h1 {
 
 .contacto__label {
     display: block;
-    color: #ff7;
+    color: #d6cf29;
 }
 
 #Contactos h2 {
@@ -722,16 +734,7 @@ nav h1 {
         font-size: 12px;
     }
 }
-@keyframes FadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 @media screen and (max-width: 360px) {
     
