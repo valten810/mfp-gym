@@ -234,7 +234,7 @@ nav h1 {
 }
 
 .plan-basico, .plan-full {
-    width: 400px;
+    width: 410px;
     box-shadow: 0 0 30px #444;
     background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
     border: 1px solid #c6cf29;
@@ -247,7 +247,7 @@ nav h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 28px;
+    margin: 28px  28px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     flex: 1; /* Ocupan toda la altura disponible del wrapper */
 }
