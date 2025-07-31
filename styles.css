@@ -200,10 +200,16 @@ nav h1 {
 
 }
 
-#Planes div {
+.plan__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch; /* Los divs wrapper se estiran igual de alto */
+}
+
+/* Los divs wrapper son flex containers */
+.plan__container > div {
+    display: flex;
 }
 
 #Planes li {
@@ -228,7 +234,7 @@ nav h1 {
 }
 
 .plan-basico, .plan-full {
-    width: 400px;
+    width: 420px;
     box-shadow: 0 0 30px #444;
     background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
     border: 1px solid #c6cf29;
@@ -241,12 +247,9 @@ nav h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 2%;
-    transition: background-color 0.3s ease, transform 0.3s ease !important;
-
-    
-
-
+    margin: 28px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex: 1; /* Ocupan toda la altura disponible del wrapper */
 }
 
 .plan-basico p, .plan-full p {
@@ -258,27 +261,19 @@ nav h1 {
     transition: all 0.3s ease;
 }
 
-
-
-
-
 .plan-basico h3, .plan-full h3 {
     font-size: 2rem;
     color: #c6cf29;
     
 }
 
-
-
-
 #Planes div {
     text-align: center;
 }
 
 .plan-basico:hover, .plan-full:hover {
-    transform: scale(1.04) !important;
+    transform: scale(1.04) translateZ(0) !important;
 }
-
 
 .beneficios li {
     border-bottom: 1px solid #333;
@@ -768,4 +763,3 @@ nav h1 {
     }
 
 }
-
