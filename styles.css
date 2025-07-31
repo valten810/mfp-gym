@@ -234,7 +234,7 @@ nav h1 {
 }
 
 .plan-basico, .plan-full {
-    width: 420px;
+    width: 400px;
     box-shadow: 0 0 30px #444;
     background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
     border: 1px solid #c6cf29;
